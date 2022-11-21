@@ -34,7 +34,7 @@ public class CentralRussianBankService extends WebServiceTemplate {
         GetCursOnDateXmlResponse response = (GetCursOnDateXmlResponse) marshalSendAndReceive(cbrApiUrl, getCursOnDateXML);
 
         if (response == null) {
-            throw new IllegalStateException("Could not get response from CBR Service");
+            throw new IllegalStateException("Проблемы с получением данных ЦБР сервиса");
         }
 
         final List<ValuteCursOnDate> courses = response.getGetCursOnDateXmlResult().getValuteData();

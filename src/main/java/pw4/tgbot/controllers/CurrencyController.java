@@ -18,13 +18,13 @@ import java.util.List;
  * отдельный пакет controllers,в котором будут храниться наши контроллеры
  */
 
-@RestController//аннотация для указания spring класса контроллера ломбок
-@RequiredArgsConstructor//аннотация создания конструктора с аргументами ломбок
+@RestController
+@RequiredArgsConstructor
 public class CurrencyController {
+
     private final CentralRussianBankService centralRussianBankService;
 
-    @PostMapping("/getCurrencies")//аннотация указывающая, что при любой операции по указанному адресу приведен на это место
-    //@ApiOperation(vlue="Получение курсов всех валют на текущий день")
+    @PostMapping("/getCurrencies")
     public List<ValuteCursOnDate> getValuteCursOnDate() throws Exception {
         return centralRussianBankService.getCurrenciesFromCbr();
     }
