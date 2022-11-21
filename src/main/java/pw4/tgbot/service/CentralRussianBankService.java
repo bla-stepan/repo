@@ -20,8 +20,8 @@ import java.util.List;
 public class CentralRussianBankService extends WebServiceTemplate {
     //тут случается некоторая магия Spring и в момент запуска нашего приложения,сюда поставляются значение из application.properties
     //или application.yml
-    @Value("${cbr.api.url}")
-    private String cbrApiUrl;
+    @Value("${cbr.api.url}")//@Value("${cbr.api.url}")
+    private String cbrApiUrl;//="http://www.cbr.ru/dailyinfowebserv/dailyinfo.asmx?wsdl";
 
     //создаем метод получения данных
     public List<ValuteCursOnDate> getCurrenciesFromCbr() throws DatatypeConfigurationException {

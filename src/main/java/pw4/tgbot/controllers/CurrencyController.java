@@ -1,13 +1,16 @@
 package pw4.tgbot.controllers;
 
-import io.micrometer.core.instrument.binder.hystrix.MicrometerMetricsPublisherThreadPool;
 import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import pw4.tgbot.dto.GetCursOnDateXmlResponse;
+import pw4.tgbot.dto.GetCursOnDateXmlResult;
 import pw4.tgbot.dto.ValuteCursOnDate;
 import pw4.tgbot.service.CentralRussianBankService;
 
-import javax.xml.datatype.DatatypeConfigurationException;
+import java.awt.*;
 import java.util.List;
 
 /**
@@ -20,8 +23,8 @@ import java.util.List;
 public class CurrencyController {
     private final CentralRussianBankService centralRussianBankService;
 
-    @PostMapping("/getCurrencies")//аннотация указывающая что при любой опаерации по указанному адресу приведен на это место
-    public List<ValuteCursOnDate> getValueCursOnDate() throws Exception {
+    @PostMapping("/getCurrencies")//аннотация указывающая, что при любой операции по указанному адресу приведен на это место
+    public List<ValuteCursOnDate> getValuteCursOnDate() throws Exception {
         return centralRussianBankService.getCurrenciesFromCbr();
     }
 }
