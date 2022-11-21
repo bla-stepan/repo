@@ -24,6 +24,7 @@ public class CurrencyController {
     private final CentralRussianBankService centralRussianBankService;
 
     @PostMapping("/getCurrencies")//аннотация указывающая, что при любой операции по указанному адресу приведен на это место
+    //@ApiOperation(vlue="Получение курсов всех валют на текущий день")
     public List<ValuteCursOnDate> getValuteCursOnDate() throws Exception {
         return centralRussianBankService.getCurrenciesFromCbr();
     }

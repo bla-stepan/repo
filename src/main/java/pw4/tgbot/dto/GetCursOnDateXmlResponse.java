@@ -8,13 +8,11 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-//получить курс на дату ответа
-//ОТВЕТ
-@XmlRootElement(name = "GetCursOnDateXmlResponse", namespace = "http://web.cbr.ru/")//указывает XMLтэг и пространство имен
-@XmlAccessorType(XmlAccessType.FIELD)//указывает как получить/указать значение поля данного объекта
-@Data//геттеры и сеттеры
+@XmlRootElement(name = "GetCursOnDateXMLResponse", namespace = "http://web.cbr.ru/") //Указываем XML тег и пространство имен
+@XmlAccessorType(XmlAccessType.FIELD) //Указываем, как получить/записать значения в поля данного объекта
+@Data //Генерируем геттеры и сеттеры
 public class GetCursOnDateXmlResponse {
 
-    @XmlElement(name = "GetCursOnDateXMLResult", namespace = "http://web.cbr.ru/")
+    @XmlElement(name = "GetCursOnDateXMLResult", namespace = "http://web.cbr.ru/") //Имя xml элемента и его пространство имен
     private GetCursOnDateXmlResult getCursOnDateXmlResult;
 }
