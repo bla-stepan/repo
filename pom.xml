@@ -8,11 +8,13 @@
         <version>2.7.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>PW4</groupId>
     <artifactId>tgbot</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>PW4tgbot</name>
     <description>Telegram bot для мониторинга финансов</description>
+
     <properties>
         <java.version>11</java.version>
         <testcontainers.version>1.17.4</testcontainers.version>
@@ -40,7 +42,7 @@
         <dependency>
             <groupId>com.github.xabgesagtx</groupId>
             <artifactId>telegram-spring-boot-starter</artifactId>
-            <version>0.26</version>
+            <version>0.26</version><!--24-->
         </dependency>
 
         <dependency>
@@ -139,8 +141,6 @@
             <version>3.0.0</version><!--2.6.1-->
             <scope>compile</scope>
         </dependency>
-
-
     </dependencies>
 
     <dependencyManagement>
